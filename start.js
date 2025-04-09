@@ -1,2 +1,2 @@
-// This is a simple redirect to the actual entry point
-require('./dist/index.js');
+// Try this path instead
+require('./dist/src/index.js');
