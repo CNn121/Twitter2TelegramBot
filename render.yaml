@@ -1,0 +1,7 @@
+services:
+  - type: worker
+    name: twitter-to-telegram-node
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
