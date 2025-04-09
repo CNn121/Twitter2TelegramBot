@@ -12,14 +12,12 @@
     "cli-progress": "^3.12.0",
     "dotenv": "^10.0.0",
     "ora": "^8.0.1",
-    "telegraf": "^4.12.2",
     "tslog": "^3.0.0",
     "twitter-api-sdk": "^1.0.0"
   },
   "devDependencies": {
     "@types/cli-progress": "^3.11.5",
     "@types/node": "^20.12.13",
-    "@types/telegraf": "^4.0.0",
     "typescript": "^4.5.4"
   },
   "author": "",
