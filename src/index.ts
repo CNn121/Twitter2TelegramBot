@@ -39,11 +39,15 @@ try {
 }
 
 async function sendTelegramMessage(message: string) {
-    try {
-        await bot.telegram.sendMessage(TELEGRAM_CHAT_ID, message);
-        logWithEmoji("Message sent to Telegram", "📩");
-    } catch (e) {
-        logger.error("❌ Error sending message:", e);
+    const chatIds = process.env.TELEGRAM_CHAT_IDS?.split(',').map(id => id.trim()) || [];
+
+    for (const chatId of chatIds) {
+        try {
+            await bot.telegram.sendMessage(chatId, message);
+            logWithEmoji(`Message sent to Telegram chat ${chatId}`, "📩");
+        } catch (e) {
+            logger.error(`❌ Error sending message to ${chatId}:`, e);
+        }
     }
 }
 
