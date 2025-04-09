@@ -2,7 +2,7 @@
   "name": "twitter-telegram-bot",
   "version": "1.0.0",
   "description": "A bot to monitor Twitter accounts and send tweets to Telegram",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "scripts": {
     "prebuild": "npm install",
     "build": "tsc",
