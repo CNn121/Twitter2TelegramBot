@@ -4,7 +4,7 @@
   "description": "A bot to monitor Twitter and send messages to Telegram",
   "main": "dist/index.js",
   "scripts": {
-    "prebuild": "npm install --save-dev @types/node @types/dotenv @types/telegraf @types/tslog",
+    "prebuild": "npm install --save-dev @types/node @types/dotenv @types/tslog",
     "build": "tsc",
     "start": "node dist/index.js"
   },
