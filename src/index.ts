@@ -11,7 +11,8 @@ config();
 const TWITTER_BEARER_TOKEN = process.env.TWITTER_BEARER_TOKEN as string;
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN as string;
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID as string;
-const USER_TO_MONITOR = process.env.USER_TO_MONITOR as string;
+const USERS_TO_MONITOR = process.env.USER_TO_MONITOR?.split(',').map(u => u.trim()) || [];
+const lastTweetIdMap: Record<string, string> = {};
 
 if (!TWITTER_BEARER_TOKEN || !TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID || !USER_TO_MONITOR) {
     throw new Error("Environment variables are not properly set.");
